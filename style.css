@@ -11,7 +11,14 @@ body {
     flex: 1 0 auto;
   }
 
+/*
 .card-image{
-    height: 400px; /* Your height here */
+    height: 400px;
     overflow: hidden;
 }
+
+
+.container {
+  display: flex;
+}
+*/
