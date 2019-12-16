@@ -30,7 +30,7 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
-.parallax {
+.parallax-container {
     min-height: 400px;
     background: transparent;
 }
