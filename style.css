@@ -29,9 +29,9 @@ nav {
 footer {
     font-family: 'Poppins', sans-serif;
 }
-/* 
-.parallax-container {
-      height: 800;
-    }
-*/
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
 
