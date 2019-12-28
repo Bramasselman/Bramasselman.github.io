@@ -29,10 +29,6 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
-.parallax-container {
-    min-height: 400px;
-
-}
 
 .parallax-container .parallax {
     top: 0;
