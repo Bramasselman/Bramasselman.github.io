@@ -1,0 +1,39 @@
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+/*
+.card-image{
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.container {
+  display: flex;
+}
+*/
+nav {
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.parallax-container .parallax {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
