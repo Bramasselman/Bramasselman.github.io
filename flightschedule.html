@@ -1,0 +1,97 @@
+<head>
+    <!-- Footer fixed -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+<header>
+      <nav>
+    <div class="nav-wrapper grey darken-">
+      <a href="#!" class="brand-logo center">Scheduling Exercise</a>
+      <ul class="left hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+        <li><a href="logbook.html">Logbook</a></li>
+        <li class="active"><a href="flightschedule.html">Flight Schedule</a></li>
+          <li><a href="shortest_path.html">Shortest Path</a></li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+
+
+
+
+ <div class="container"> <!-- add container so it text doesnt go all the way to the edge of screen -->
+    <div class="col s12, m8, l8">
+            <h3>Flight schedule Instance A</h3>
+            At this moment a schedule is generated with no flights being infeasible. All delay is implemented and overlapping flight legs are pushed. In addition, the airport capacity limits are adhered to. The top row presents all aircraft, and the left most column indicates the flights for that aircraft. For example, the top left cell indicates that the first flight of aircraft "TranspCom#1" (which actually is not an aircaft) goes from CGD to ORY. Furthermore, departure and arrival times and dates are included. Lastly, the flight number is included.
+
+
+        </div>
+     <br>
+<div style="text-align: center;">
+    <div>
+        <iframe style="width: 100%; height: 710px; overflow: auto;" src="schedule_instanceA.html" frameborder="0" width="320" height="240">
+        </iframe>
+    </div>
+</div>
+
+
+
+
+     <div class="col s12, m8, l8">
+            <h3>Flight schedule Instance B</h3>
+            The data of instance B was loaded quite conveniently (only very minor changes were required to our code since we anticipated well). A schedule was generated with no flights being infeasible. All delay is implemented and overlapping flight legs are pushed. The top row presents all aircraft, and the left most column indicates the flights for that aircraft. For example, the top left cell indicates that the first flight of aircraft "TranspCom#1" (which actually is not an aircaft) goes from CGD to ORY. Furthermore, departure and arrival times and dates are included. Lastly, the flight number is included.
+
+
+        </div>
+     <br>
+<div style="text-align: center;">
+    <div>
+        <iframe style="width: 100%; height: 710px; overflow: auto;" src="schedule_instanceB.html" frameborder="0" width="320" height="240">
+        </iframe>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+<br>
+    <br>
+</main>
+
+    
+
+<footer class="page-footer grey darken-">
+
+          <div class="footer-copyright">
+            <div class="container">
+            Arthur Reijns & Bram Asselman - Group 6
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
+            </div>
+          </div>
+        </footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script> 
+//Initialise 
+      $(document).ready(function(){
+      $('.parallax').parallax();
+      }); 
+</script>  
+    
+    
+</body>

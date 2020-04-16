@@ -1,0 +1,163 @@
+<head>
+    <!-- Footer fixed -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper grey darken-">
+            <a href="index.html" class="brand-logo  center">Scheduling Exercise</a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="logbook.html">Logbook</a></li>
+                <li><a href="flightschedule.html">Flight Schedule</a></li>
+                <li><a href="shortest_path.html">Shortest Path</a></li>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+
+    <div class="container"> <!-- add container so it text doesnt go all the way to the edge of screen -->
+        <div class="col s12, m8, l8">
+            <h3>Some intermediate steps</h3>
+
+            <div class="col s12, m8, l8">
+            <h4>Initial flights dataframe</h4>
+
+            Processing all given data in Python (using Pandas). With the provided data being in a rather tedious format, this step took already a lot of time. The result is that all required data is now available in Python in a user-friendly way.
+
+        <br>
+        </div>
+
+            <br>
+        <div style="text-align: center;">
+            <div>
+                <iframe style="width: 100%; height: 710px; overflow: auto;" src="initial_flights_df.html"
+                        frameborder="0" width="320" height="240">
+                </iframe>
+            </div>
+            <br>
+        </div>
+
+
+            <!--
+         <div class="col s12, m8, l8">
+            <h4>IATA Codes web scraping</h4>
+
+            In order to identify the broken itineraries, one should look for three main things.
+             First of all, the sequence of flights within the itinerary should be respected.
+             Secondly, every next flight should leave later than the previous flight added by the transit time.
+             Finally, one should take into account that for domestic and continental flight a maximum delay of 18 hours is allowed, while for intercontinental flight the allowed delay is 36 hours.
+             To determine whether or not a flight is domestic/continental/intercontinental, all current IATA airport codes and the respective country were scraped from the web.
+             This way, it becomes convenient to write an efficient function that identifies the type of flights.
+
+        <br>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <div>
+                <iframe style="width: 100%; height: 710px; overflow: auto;" src="ap_codes.html"
+                        frameborder="0" width="320" height="240">
+                </iframe>
+            </div>
+            <br>
+        </div>
+            -->
+
+       <div class="col s12, m8, l8">
+            <h4>Retrieve Broken Itineraries</h4>
+
+           Broken itineraries were retrieved based on the criteria listed in the assignment.
+           The passengers part of these itineraries were sorted based on the potential downgrading cost (a passenger flying first class
+           can lead to a large penalty if he/she is downgraded to economy class). This is why based on this criteria the passengers were sorted
+           before adding them to the shortest path loop. More explanation on the shortest path algorithm and implementation is given
+           in <a href="shortest_path.html">Shortest Path</a>.
+
+        <br>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <div>
+                <iframe style="width: 100%; height: 710px; overflow: auto;" src="broken_passengers.html"
+                        frameborder="0" width="320" height="240">
+                </iframe>
+            </div>
+            <br>
+        </div>
+
+
+
+
+            <div class="col s12, m8, l8">
+            <h4>Remaining Empty Seats for each Flight</h4>
+
+           After having defined the broken itineraries (and thus passengers that need to be assigned to another (set of) flight(s),
+                the amount of passengers that are part of the non-broken itineraries can be found. This amount is then subtracted from the capacity per flight.
+                This way, the amount of remaining seats for each flight number was obtained. This number will be particularly useful when assigning passengers form broken
+                itineraries to new flights.
+
+        <br>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <div>
+                <iframe style="width: 100%; height: 710px; overflow: auto;" src="remaining_seats_df.html"
+                        frameborder="0" width="320" height="240">
+                </iframe>
+            </div>
+            <br>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="col s12, m8, l8">
+            <h4>Shortest path algorithm</h4>
+
+            For passengers with cancelled itineraries, starting with passengers inducing highest costs, a shortest path
+            was set-up with the network origin being their departure airport and the network sink being their arrival
+            airport.
+            Along all existing flights with available seating capacity, a path with minimum cost was found and
+            passengers were assigned to those flights. This process was repeated until all passengers were assigned
+            flights, making sure that all passengers would end up at the desired destination.
+
+            <br>
+
+
+
+        <br>
+        </div>
+        <br>
+
+
+
+
+
+    </div>
+
+
+</main>
+
+<footer class="page-footer grey darken-">
+
+    <div class="footer-copyright">
+        <div class="container">
+            Arthur Reijns & Bram Asselman - Group 6
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
+        </div>
+    </div>
+</footer>
+</body>
